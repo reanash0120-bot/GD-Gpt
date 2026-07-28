@@ -1,5 +1,5 @@
 {
-    "geode": "5.8.2",
+    "geode": "4.0.0",
     "gd": {
         "win": "2.2081",
         "android": "2.2081"
@@ -8,10 +8,5 @@
     "name": "GD GPT",
     "version": "1.0.0",
     "developer": "Nash & ChatGPT",
-    "description": "AI-assisted Geometry Dash level creation and gameplay analysis mod.",
-    "repository": "https://github.com/reanash0120-bot/GD-Gpt",
-    "links": {
-        "homepage": "https://github.com/reanash0120-bot/GD-Gpt",
-        "source": "https://github.com/reanash0120-bot/GD-Gpt"
-    }
+    "description": "AI-assisted Geometry Dash level creation and gameplay analysis mod."
 }
