@@ -41,25 +41,7 @@ public:
         if (!EditorUI::init(editor))
             return false;
 
-        auto sprite = CCSprite::createWithSpriteFrameName(
-            "GJ_infoIcon_001.png"
-        );
-
-        if (!sprite)
-            return true;
-
-        auto button = CCMenuItemSpriteExtra::create(
-            sprite,
-            this,
-            menu_selector(GDGPTEditorUI::onGDGPT)
-        );
-
-        button->setScale(0.75f);
-
-        if (m_toolbarMenu) {
-            m_toolbarMenu->addChild(button);
-            m_toolbarMenu->updateLayout();
-        }
+        
 
         return true;
     }
