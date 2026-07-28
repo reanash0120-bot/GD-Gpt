@@ -1,0 +1,20 @@
+name: Build GD GPT
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check project
+        run: |
+          echo "GD GPT source checked out."
+          echo "Geode build configuration will be added next."
