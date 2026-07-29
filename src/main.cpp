@@ -9,15 +9,19 @@ protected:
         if (!FLAlertLayer::init(
             nullptr,
             "GD GPT v1.00",
+            "Welcome to GD GPT!\n\n"
+            "AI level creation is coming soon.\n"
+            "Ask me to create gameplay, designs,\n"
+            "triggers, particles, or gimmicks!",
             "Close",
             nullptr,
             420.f,
-            "Welcome to GD GPT!\\n\\n"
-            "AI level creation is coming soon.\\n"
-            "Ask me to create gameplay, designs,\\n"
-            "triggers, particles, or gimmicks!"
-        ))
+            true,
+            200.f,
+            1.f
+        )) {
             return false;
+        }
 
         return true;
     }
@@ -25,6 +29,7 @@ protected:
 public:
     static GDGPTPopup* create() {
         auto ret = new GDGPTPopup();
+
         if (ret && ret->init()) {
             ret->autorelease();
             return ret;
@@ -40,8 +45,6 @@ public:
     bool init(LevelEditorLayer* editor) {
         if (!EditorUI::init(editor))
             return false;
-
-        
 
         return true;
     }
