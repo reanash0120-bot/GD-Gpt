@@ -7,5 +7,6 @@
     "id": "nash.gdgpt",
     "name": "GD GPT",
     "version": "v1.0.0",
-    "developer": "Nash & ChatGPT"
+    "developer": "Nash & ChatGPT",
+    "description": "AI-assisted Geometry Dash creation tool."
 }
