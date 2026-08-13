@@ -46,10 +46,38 @@ public:
         if (!EditorUI::init(editor))
             return false;
 
+        // Create the GD GPT button
+        auto menu = CCMenu::create();
+        menu->setPosition({55.f, 40.f});
+        menu->setContentSize({100.f, 40.f});
+        menu->setAnchorPoint({0.5f, 0.5f});
+
+        auto label = CCLabelBMFont::create(
+            "GD GPT",
+            "bigFont.fnt"
+        );
+
+        label->setScale(0.45f);
+
+        auto button = CCMenuItemLabel::create(
+            label,
+            this,
+            menu_selector(GDGPTEditorUI::onGDGPT)
+        );
+
+        menu->addChild(button);
+        menu->updateLayout();
+
+        // Put the button above the editor UI
+        this->addChild(menu, 1000);
+
         return true;
     }
 
     void onGDGPT(CCObject*) {
-        GDGPTPopup::create()->show();
+        auto popup = GDGPTPopup::create();
+
+        if (popup)
+            popup->show();
     }
 };
